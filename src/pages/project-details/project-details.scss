@@ -1,0 +1,57 @@
+.project-details{
+    .list-card{
+        border:1px solid black;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px gray;
+        margin:4px 6px;
+        box-sizing: border-box;
+    }
+    .status{
+        float: right;
+        border: 1px solid color($colors,primary);
+        border-radius: 2px;
+        padding: 1px 2px;
+        margin-top: -1px;
+        color: color($colors,primary);
+    }
+    
+    ion-list{
+        margin-bottom: 0px;
+        button{
+            padding-left:4px;
+            .logo
+            {
+                margin-right: 10px;
+                font-size: 45px;
+            }
+        } 
+        ion-list-header{
+            h1, span{
+               color: #1c3869
+            }
+        }       
+    }
+    .list-header-md{
+        margin-top: 2px;
+        border-bottom: 1px solid #c8c7cc;
+        /* margin: 1px; */
+        box-sizing: border-box;
+        border-radius: 4px 4px 0px 0px;
+        margin-bottom: 0px;
+    }
+    .summary{
+        background: #1c3869;
+        color: #f4f4f4;
+        border: 1px solid #222;
+        border-radius: 0px 0px 4px 4px;
+        padding: 5px 10px;
+        margin: 1px;
+        p{
+            span{
+                float:right;
+                font-weight: bold;
+            }
+        }
+        
+    }
+}

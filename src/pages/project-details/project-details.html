@@ -1,0 +1,167 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Project Details</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="project-details">
+
+    <div class="list-card">
+        <ion-list>
+            <ion-list-header>
+                <h1 style="float: left;">12</h1>
+                <span>Jan</span>
+            </ion-list-header>
+
+            <button ion-item>
+                <!-- <ion-icon item-left name="contacts" class="logo"></ion-icon> -->
+                <ion-avatar item-start>
+                    <img src="assets/imgs/avatar/labor.png">
+                </ion-avatar>
+                <h2>Krishna G</h2>
+                <h3>Conveying Systems
+                    <span class="status" style="border-color:#081325;color:#081325;">Master</span>
+                </h3>
+                <p>10 workers (10.0 Hours)</p>
+            </button>
+
+            <button ion-item>
+                <!-- <ion-icon item-left name="cog" class="logo"></ion-icon> -->
+                <ion-avatar item-start>
+                    <img src="assets/imgs/avatar/material.png">
+                </ion-avatar>
+                <h2>Tranzeal Inc</h2>
+                <h3>Concrete
+                    <span class="status" style="border-color:#488aff;color:#488aff">Put in Place</span>
+                </h3>
+                <p>1.0 Quantity</p>
+            </button>
+
+            <button ion-item>
+                <!-- <ion-icon item-left name="construct" class="logo"></ion-icon> -->
+                <ion-avatar item-start>
+                    <img src="assets/imgs/avatar/equipment.png">
+                </ion-avatar>
+                <h2>Tranzeal Inc</h2>
+                <h3>Digger
+                    <span class="status" style="border-color:#f53d3d;color:#f53d3ded">staged</span>
+                </h3>
+                <p>1.0 Quantity</p>
+            </button>
+
+
+        </ion-list>
+        <div class="summary">
+            <h6>SHIFT PRODUCTION SUMMARY</h6>
+            <p>Total Hours
+                <span>8.0</span>
+            </p>
+            <p>Concrete
+                <span>50</span>
+            </p>
+            <p>Concrete Per Hour
+                <span>6.25</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="list-card">
+        <ion-list>
+            <ion-list-header>
+                <h1 style="float: left;">11</h1>
+                <span>Jan</span>
+            </ion-list-header>
+
+            <button ion-item>
+                <!-- <ion-icon item-left name="contacts" class="logo"></ion-icon> -->
+                <ion-avatar item-start>
+                    <img src="assets/imgs/avatar/labor.png">
+                </ion-avatar>
+                <h2>Krishna G</h2>
+                <h3>Conveying Systems
+                    <span class="status" style="border-color:#081325;color:#081325;">Master</span>
+                </h3>
+                <p>10 workers (10.0 Hours)</p>
+            </button>
+
+            <button ion-item>
+                <!-- <ion-icon item-left name="cog" class="logo"></ion-icon> -->
+                <ion-avatar item-start>
+                    <img src="assets/imgs/avatar/material.png">
+                </ion-avatar>
+                <h2>Tranzeal Inc</h2>
+                <h3>Concrete
+                    <span class="status" style="border-color:#488aff;color:#488aff">Put in Place</span>
+                </h3>
+                <p>1.0 Quantity</p>
+            </button>
+
+
+
+
+        </ion-list>
+        <div class="summary">
+            <h6>SHIFT PRODUCTION SUMMARY</h6>
+            <p>Total Hours
+                <span>8.0</span>
+            </p>
+            <p>Concrete
+                <span>50</span>
+            </p>
+            <p>Concrete Per Hour
+                <span>6.25</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- <ion-card *ngIf="project.id">
+        <ion-card-content>
+            <ion-avatar item-left>
+                <h3>12</h3>
+            </ion-avatar>
+            <h2 class="card-title">{{project.title}}</h2>
+            <p>{{project.address}}, {{project.city}} {{project.state}}</p>
+        </ion-card-content>
+        <ion-list>
+
+            <ion-item>
+                <ion-icon item-left name="ionitron"></ion-icon>
+                <h3>Damodar</h3>
+                <p>
+                    <ion-badge item-end>10 workers</ion-badge>
+                    <ion-badge item-end>260 Hours</ion-badge>
+                </p>
+
+               
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left name="filing"></ion-icon>
+                <ion-badge item-end color="dark">260</ion-badge>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left name="construct"></ion-icon>
+                <ion-badge item-end>260 Quantity</ion-badge>
+            </ion-item>
+            <button ion-item (click)="openOwnerDetail(project.owner)">
+                <ion-avatar item-left>
+                    <img src="{{project.owner.picture}}" />
+                </ion-avatar>
+                <h2>{{project.owner.name}}</h2>
+                <p>{{project.owner.title}}</p>
+            </button>
+        </ion-list>
+
+        <ion-item>
+            <button ion-button icon-left (click)="favorite(project)" clear item-left>
+                <ion-icon name="star"></ion-icon>
+                Favorite
+            </button>
+            <button ion-button icon-left (click)="share(project)" clear item-right>
+                <ion-icon name="share"></ion-icon>
+                Share
+            </button>
+        </ion-item>
+
+    </ion-card> -->
+
+</ion-content>
