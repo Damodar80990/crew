@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { homeComponent } from '../pages/home/home.component';
 import { listComponent } from '../pages/list/list.component';
-
+//import { laborComponent } from '../pages/labor/labor.component';
 //import { projectDetailsComponent } from '../pages/project-details/project-details.component';
 
 export interface MenuItem {
@@ -31,25 +31,26 @@ export class MyApp {
     this.initializeApp();
 
     this.appMenuItems = [
-      {title: 'My Projects', component: listComponent, icon: 'paper'},
+      {title: 'Projects', component: listComponent, icon: 'paper'},
       {title: 'Employees', component: listComponent, icon: 'people'},
-      {title: 'Favorites', component: homeComponent, icon: 'star'},
-      {title: 'Get Preapproved', component: homeComponent, icon: 'checkmark-circle'},
+      {title: 'Time Cards', component: homeComponent, icon: 'grid'},
+      {title: 'Timeoff', component: homeComponent, icon: 'clock'},
+      {title: 'Notifications', component: listComponent, icon: 'notifications'},
+      {title: 'Reports', component: homeComponent, icon: 'analytics'},
+      {title: 'Settings', component: homeComponent, icon: 'cog'},
+      {title: 'About', component: homeComponent, icon: 'information-circle'},
+      {title: 'Help', component: homeComponent, icon: 'call'},
+      {title: 'Logout', component: homeComponent, icon: 'log-out'},
     ];
 
-    this.accountMenuItems = [
-        {title: 'My Account', component: homeComponent, icon: 'ios-contact'},
-        {title: 'Logout', component: homeComponent, icon: 'log-out'},
-    ];
+    // this.accountMenuItems = [
+    //     {title: 'My Account', component: homeComponent, icon: 'ios-contact'},
+    //     {title: 'Logout', component: homeComponent, icon: 'log-out'},
+    // ];
 
-    this.helpMenuItems = [
-        {title: 'Assistance', component: homeComponent, icon: 'call'},
-        {title: 'About', component: homeComponent, icon: 'globe'},
-    ];
-    // used for an example of ngFor and navigation
-    // this.pages = [
-    //   { title: 'Home', component: HomePage },
-    //   { title: 'List', component: HomePage }
+    // this.helpMenuItems = [
+    //     {title: 'Assistance', component: homeComponent, icon: 'call'},
+    //     {title: 'About', component: homeComponent, icon: 'globe'},
     // ];
 
   }

@@ -5,16 +5,16 @@
     <img src="assets/imgs/civil.jpg" class="menu-logo" />
 
     <ion-list>
-      <ion-list-header>
+      <!-- <ion-list-header>
         CREW
-      </ion-list-header>
+      </ion-list-header> -->
       <button menuClose ion-item *ngFor="let menuItem of appMenuItems" (click)="openPage(menuItem)">
         <ion-icon item-left [name]="menuItem.icon"></ion-icon>
         {{menuItem.title}}
       </button>
     </ion-list>
 
-    <ion-list>
+    <!-- <ion-list>
       <ion-list-header>
         Help
       </ion-list-header>
@@ -32,7 +32,7 @@
         <ion-icon item-left [name]="menuItem.icon"></ion-icon>
         {{menuItem.title}}
       </button>
-    </ion-list>
+    </ion-list> -->
 
   </ion-content>
   <!-- <ion-content>
