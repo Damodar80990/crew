@@ -8,20 +8,31 @@
 </ion-header>
 
 <ion-content no-bounce class="page-home">
-    <ion-slides>
+        <!-- <ion-slides pager (ionSlideDidChange)="slideChanged()">
+                <ion-slide *ngFor="let slide of slides">
+                    <p [innerHTML]="slide.descriptionOnTop"></p>
+                    <div class="image-content-box">
+                        <img [src]="slide.image" class="slide-image"/>
+                    </div>
+                    <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+                    <p [innerHTML]="slide.description"></p>
+                    <button ion-button color="primary" class="button-alignment-skip" (click)="leaveIntro()">Skip</button>
+                    <button ion-button color="primary" class="button-alignment-next" (click)="nextSlide()" *ngIf="!isHelpListComponent">Next</button>
+                    <button ion-button color="primary" [style.display] = "currentIndex < 3 ? '' : 'none'" class="button-alignment-next" (click)="nextSlide()" *ngIf="isHelpListComponent">Next</button>
+                </ion-slide>
+            </ion-slides> -->
+    <ion-slides pager (ionSlideDidChange)="slideChanged()">
 
-        <ion-slide style="background-image: url('assets/imgs/site.jpg')">
-            <p>Increase Productivity with CREW App. Daily Construction Reporting. Save Time on the Job</p>
+    
+
+        <ion-slide *ngFor="let slide of slides" [style.background-image]="'url(assets/imgs/'+slide.image+')'" >
+            <p>{{slide.description}}</p>
+            <button ion-button color="primary" class="button-alignment-skip" (click)="leaveIntro()">Skip</button>
+            <button ion-button color="primary" class="button-alignment-next" (click)="nextSlide()">{{currentIndex != 2 ? 'Next':'Login'}}</button>
+            
         </ion-slide>
 
-        <ion-slide style="background-image: url('assets/imgs/track.jpg')">
-            <p>PDF Daily Reports</p>
-        </ion-slide>
-
-        <ion-slide style="background-image: url('assets/imgs/construction1.jpg')">
-            <p>Keep track of your favorites and get notified in real time</p>
-        </ion-slide>
-
+        
     </ion-slides>
 
 </ion-content>
