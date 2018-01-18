@@ -5,8 +5,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { homeComponent } from '../pages/home/home.component';
 import { listComponent } from '../pages/list/list.component';
-//import { laborComponent } from '../pages/labor/labor.component';
-//import { projectDetailsComponent } from '../pages/project-details/project-details.component';
+import { laborComponent } from '../pages/labor/labor.component';
+import { projectDetailsComponent } from '../pages/project-details/project-details.component';
+//import { MaterialEquipmentComponent } from './../pages/material-equipment/material-equipment';
 
 export interface MenuItem {
   title: string;
@@ -21,7 +22,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = homeComponent;
-  //rootPage: any = projectDetailsComponent;
+  //rootPage: any = MaterialEquipmentComponent; //laborComponent;
   appMenuItems: Array<MenuItem>;
   accountMenuItems: Array<MenuItem>;
   helpMenuItems: Array<MenuItem>;

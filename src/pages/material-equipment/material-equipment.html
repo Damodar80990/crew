@@ -1,0 +1,86 @@
+<ion-header text-capitalize> 
+  <ion-navbar>
+    <ion-title>{{meFlag=='m'? 'Material':'Equipment'}} Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="me-details">
+  
+      <ion-row class="date-div">
+        <ion-col>
+            <ion-chip>
+                <ion-icon name="briefcase"></ion-icon>
+                <ion-label>Airport Expansion DCR</ion-label>
+            </ion-chip>        
+        </ion-col>
+        <ion-col>
+            <ion-chip>
+                <ion-icon name="calendar"></ion-icon>
+                <ion-label><b>Thu jan/15/2018</b></ion-label>
+              </ion-chip>        
+        </ion-col>
+      </ion-row>
+  
+    </ion-grid>
+  
+    <ion-list>      
+      <ion-item>
+        <ion-icon name="list-box" item-start></ion-icon>
+        <p>Name of {{meFlag=='m'? 'Material':'Equipment'}}</p>
+        <h2>{{meFlag=='m'? '3/8 Rebor':'CAT D10'}}</h2>
+        <button ion-button color="danger" round class="clear-btns" item-end>
+          <ion-icon name='close' is-active="false"></ion-icon>
+          clear
+        </button>
+      </ion-item>
+      <ion-item>
+          <!-- <ion-icon name="list" item-start></ion-icon> -->
+          <i class="fa fa-list" aria-hidden="true" item-start></i>
+          <p>Name of Company</p>
+          <h2>Andrew Addison</h2>
+          <button ion-button color="danger" round class="clear-btns" item-end>
+            <ion-icon name='close' is-active="false"></ion-icon>
+            clear
+          </button>
+      </ion-item>
+      <ion-item class="note-div" *ngIf="meFlag=='m'">
+            <!-- <i class="fa fa-stack-exchange" aria-hidden="true" item-start></i>   -->
+            <ion-icon name="logo-twitch" item-start></ion-icon>        
+            <ion-label floating>Note:</ion-label>
+            <ion-input type="text" value=""></ion-input>          
+          </ion-item>
+      <ion-item>
+          <ion-icon name="happy" item-start></ion-icon>
+          <p>Status</p>
+          <h2>Put In Place</h2>
+          <button ion-button color="danger" round class="clear-btns" item-end>
+            <ion-icon name='close' is-active="false"></ion-icon>
+            clear
+          </button>
+        </ion-item>
+     
+      <ion-item class="workers-div">
+        <ion-icon name="keypad" item-start></ion-icon>
+        <p>Quantity</p>
+        <ion-badge color="dark" round>8.0</ion-badge>
+        <div item-end col-6 text-right>
+        <button ion-button>
+            <ion-icon name="add"></ion-icon>
+          </button>
+          <button ion-button>
+            <ion-icon name="remove"></ion-icon>
+          </button>
+        </div>
+      </ion-item>     
+      <ion-item>
+        <ion-icon name="analytics" item-start></ion-icon>
+        <h1>Shift Report</h1>
+        <p>North Building Foundation</p>
+      </ion-item>
+      
+    </ion-list>
+    <div padding margin-bottom>
+        <button  ion-button round block >Save</button>     
+    </div> 
+  </ion-content>
