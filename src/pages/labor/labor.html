@@ -1,11 +1,109 @@
-<ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
+<ion-header text-capitalize>
+  <ion-navbar>
+    <ion-title>Labor Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="labor">
+  <ion-grid class="labor-details">
+
+    <ion-row class="date-div">
+      <ion-col>
+          <ion-chip>
+              <ion-icon name="briefcase"></ion-icon>
+              <ion-label>Airport Expansion DCR</ion-label>
+          </ion-chip>        
+      </ion-col>
+      <ion-col>
+          <ion-chip>
+              <ion-icon name="calendar"></ion-icon>
+              <ion-label><b>Thu jan/15/2018</b></ion-label>
+            </ion-chip>        
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="selection-div" >
+      <ion-col>
+        <h6>Person</h6>
+        <ion-toggle></ion-toggle>
+        <h6>Company</h6>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon name="list" item-start></ion-icon>
+      <p>Name of Company</p>
+      <h2>Andrew Addison</h2>
+      <button ion-button color="danger" round class="clear-btns" item-end>
+        <ion-icon name='close' is-active="false"></ion-icon>
+        clear
       </button>
-      <ion-title>Labor Details</ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  <ion-content class="labor">
-  </ion-content>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="list-box" item-start></ion-icon>
+      <p>Trade</p>
+      <h2>Concrete - 03000</h2>
+      <button ion-button color="danger" round class="clear-btns" item-end>
+        <ion-icon name='close' is-active="false"></ion-icon>
+        clear
+      </button>
+    </ion-item>
+    <ion-item>
+        <ion-icon name="pricetags" item-start></ion-icon>
+        <p>Cost code</p>
+        <h2>100000</h2>
+        <button ion-button color="danger" round class="clear-btns" item-end>
+          <ion-icon name='close' is-active="false"></ion-icon>
+          clear
+        </button>
+      </ion-item>
+    <ion-item>
+      <ion-icon name="list" item-start></ion-icon>
+      <p>Class/Skill level</p>
+      <h2>Crew</h2>
+      <button ion-button color="danger" round class="clear-btns" item-end>
+        <ion-icon name='close' is-active="false"></ion-icon>
+        clear
+      </button>
+    </ion-item>
+    <ion-item class="workers-div">
+      <ion-icon name="contacts" item-start></ion-icon>
+      <p>Workers(s)</p>
+      <!-- <h2>1</h2>  -->
+      <ion-badge color="dark" round>5</ion-badge>
+      <div item-end col-6 text-right>
+      <button ion-button>
+          <ion-icon name="add"></ion-icon>
+        </button>
+        <button ion-button>
+          <ion-icon name="remove"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+    <ion-item class="clock-div">
+      <ion-icon name="clock" item-start></ion-icon>
+      <p>Hour(s)</p>
+      <h2>8.0</h2>
+      <div item-end col-6 text-right>
+        <button ion-button>
+          <ion-icon name="arrow-up"></ion-icon>
+        </button>
+        <button ion-button>
+          <ion-icon name="arrow-down"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="analytics" item-start></ion-icon>
+      <h1>Shift Report</h1>
+      <p>North Building Foundation</p>
+    </ion-item>
+    
+  </ion-list>
+  <div padding margin-bottom>
+      <button  ion-button round block >Save</button>     
+  </div> 
+</ion-content>

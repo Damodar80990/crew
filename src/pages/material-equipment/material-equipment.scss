@@ -1,6 +1,7 @@
-.labor{
+page-material-equipment {
+
     font-size: 1.4rem !important;
-    .labor-details{
+    .me-details{
         .flex-grow{
             flex-grow:1;            
         }
@@ -8,12 +9,7 @@
         .date-div{            
             ion-icon{
                 font-size: 26px;
-            }
-            // span{
-            //     font-weight: 500;                
-            //     margin-left: 5px;
-            //     font-size: 16px;
-            // }
+            }            
             ion-col{ 
                 flex-grow:1;               
                 ion-chip{                    
@@ -24,21 +20,6 @@
             }
         }
 
-        .selection-div{
-            text-align: right;
-            h6{
-                float:left;
-                margin-top:9px;
-                color:#505050;
-            }
-            ion-toggle{
-                float:left;
-                //margin-top: -10px;
-                // margin-left: -7px;
-                // margin-right: -7px;
-            }
-        }       
-        
     }   
     ion-list{       
         ion-item{            
@@ -58,7 +39,19 @@
                     }
                 }                
             }
+            .fa-list{       
+                font-size: 23px;
+            }
+            .fa-stack-exchange{       
+                font-size: 26px;
+            }
+            .note-div{
+                .input-wrapper{
+                    margin-left:3px;
+                }
+            }
         }        
     }
+    
      
 }

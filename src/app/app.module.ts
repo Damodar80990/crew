@@ -8,6 +8,7 @@ import { listComponent } from '../pages/list/list.component';
 import { projectDetailsComponent } from '../pages/project-details/project-details.component';
 import { laborComponent } from '../pages/labor/labor.component';
 import { loginComponent } from '../pages/login/login.component';
+import { MaterialEquipmentComponent } from './../pages/material-equipment/material-equipment';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -20,7 +21,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     listComponent,
     projectDetailsComponent,
     laborComponent,
-    loginComponent
+    loginComponent,
+    MaterialEquipmentComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     listComponent,
     projectDetailsComponent,
     laborComponent,
-    loginComponent
+    loginComponent,
+    MaterialEquipmentComponent
   ],
   providers: [
     StatusBar,

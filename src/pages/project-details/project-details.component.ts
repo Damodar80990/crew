@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavParams, NavController } from 'ionic-angular';
 
 import { laborComponent } from '../labor/labor.component';
+import { MaterialEquipmentComponent } from '../material-equipment/material-equipment';
 
 @Component({
     selector: 'project-details',
@@ -10,7 +11,7 @@ import { laborComponent } from '../labor/labor.component';
 export class projectDetailsComponent {
     project: any;
 
-    constructor(public navParams: NavParams, public navController:NavController) {
+    constructor(public navParams: NavParams, public navController: NavController) {
         this.project = this.navParams.data;
         console.log(this.project);
         //sample json data
@@ -38,10 +39,12 @@ export class projectDetailsComponent {
             }
         }
     }
-    openLmeDetails(lme:any){
-        //if(lme=="m"){
+    openLmeDetails(lme: any) {
+        if (lme == "l") {
             console.log("lme")
-            this.navController.push(laborComponent,lme);
-        //}        
+            this.navController.push(laborComponent, lme);
+        } else {
+            this.navController.push(MaterialEquipmentComponent, lme);
+        }
     }
 }
