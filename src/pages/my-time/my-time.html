@@ -1,0 +1,185 @@
+<!--
+  Generated template for the MyTimePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My Time</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="today" *ngIf="openTabContent=='E'">
+    <ion-row>
+      <ion-col class="header">
+        <span>
+          <b>Today</b>
+        </span>
+        <span color="primary" float-end>
+          <b>1:10</b>
+        </span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="time-cards">
+      <ion-card>
+        <ion-label class="time-div" float-end>
+          0:00
+        </ion-label>
+        <ion-card-content>
+          <ion-row>
+            <p>10.23 AM - 10.24 AM (1:00)</p>
+          </ion-row>
+          <ion-row>
+            <p>Project Name</p>
+          </ion-row>
+          <ion-row>
+            <p>Cost Code</p>
+          </ion-row>
+        </ion-card-content>
+        <ion-row class="icons">
+          <ion-col text-right>
+            <ion-icon name="locate"></ion-icon>
+            <ion-icon name="create"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <ion-label class="time-div" float-end>
+          0:10
+        </ion-label>
+        <ion-card-content>
+          <ion-row>
+            <p>10.23 AM - 10.24 AM (0:00)</p>
+          </ion-row>
+          <ion-row>
+            <p>Project Name</p>
+          </ion-row>
+          <ion-row>
+            <p>Cost Code</p>
+          </ion-row>
+        </ion-card-content>
+        <ion-row class="icons">
+          <ion-col text-right>
+            <ion-icon name="locate"></ion-icon>
+            <ion-icon name="create"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+  </div>
+  <div class="week" *ngIf="openTabContent!='E'">
+    <ion-row>
+      <ion-col class="header" text-center>
+        <ion-icon name="arrow-dropleft" float-left></ion-icon>
+        <span>
+          <b>{{openTabContent=='W'?'This Week':'Current Pay Period'}}</b>
+        </span>
+        <ion-icon name="arrow-dropright" float-right></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row class="time-week">
+      <ion-card>
+        <ion-card-header>
+          Perry Stevenson
+        </ion-card-header>
+
+        <ion-card-content no-padding>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-3>1/22</ion-col>
+              <ion-col col-6>MONDAY</ion-col>
+              <ion-col col-3 text-right>0:02</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-3>1/23</ion-col>
+              <ion-col col-6>TUESDAY</ion-col>
+              <ion-col col-3 text-right>
+                <b>-</b>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-3>1/24</ion-col>
+              <ion-col col-6>WEDNESDAY</ion-col>
+              <ion-col col-3 text-right>
+                <b>-</b>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-3>1/25</ion-col>
+              <ion-col col-6>THURSDAY</ion-col>
+              <ion-col col-3 text-right>
+                <b>-</b>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-3>1/26</ion-col>
+              <ion-col col-6>FRIDAY</ion-col>
+              <ion-col col-3 text-right>
+                <b>-</b>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-3>1/27</ion-col>
+              <ion-col col-6>SATURDAY</ion-col>
+              <ion-col col-3 text-right>
+                <b>-</b>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-3>1/28</ion-col>
+              <ion-col col-6>SUNDAY</ion-col>
+              <ion-col col-3 text-right>
+                <b>-</b>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngIf="openTabContent=='P'">
+              <ion-col col-9 text-left>
+                <b>Regular</b>
+              </ion-col>
+              <ion-col col-3 text-right>
+                <b>0:02</b>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngIf="openTabContent=='P'">
+              <ion-col col-9 text-left>
+                <b>Overtime</b>
+              </ion-col>
+              <ion-col col-3 text-right>
+                <b>0:00</b>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-9></ion-col>
+              <ion-col col-3 text-right>
+                <b>0:02</b>
+              </ion-col>
+            </ion-row>
+          </ion-grid>  
+          <ion-row class="row-center">
+              <button text-center ion-button color="primary"  round (click)="doneEvent()">Start</button>
+          </ion-row>
+          <ion-row class="row-center">
+              <button ion-button color="secondary"  round (click)="doneEvent()">Done</button>
+              <button ion-button color="danger"  round>Edit</button>
+          </ion-row>        
+        </ion-card-content>
+        
+      </ion-card>
+    </ion-row>
+  </div>
+  <ion-fab right bottom margin-bottom *ngIf="openTabContent=='E'">
+    <button ion-fab color="primary" mini>
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-tabs>
+    <ion-tab tabIcon="calendar" (ionSelect)="openTabs('E')"></ion-tab>
+    <ion-tab tabIcon="code-working" (ionSelect)="openTabs('W')"></ion-tab>
+    <ion-tab tabIcon="cash" (ionSelect)="openTabs('P')"></ion-tab>
+  </ion-tabs>
+</ion-content>
