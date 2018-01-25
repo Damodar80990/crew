@@ -1,0 +1,43 @@
+page-clock {
+    .ion-card{       
+        .ion-card-header{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: lighten(color($colors,primary),5%);
+            .time-main{
+                font-size:40px !important;
+                color:  color($colors,dark)       
+            }
+            .time-sub{
+                font-size:25px !important; 
+                ion-icon{
+                    margin-right: 5px;
+                }                               
+            }
+            .time-lunch-break{
+                font-size:40px !important;  
+                color: lighten(yellow,20%);
+            }            
+        }
+        .ion-card-content{
+            margin-top:15px;            
+            ion-row{ 
+                .go-on-list{
+                    button{                       
+                        justify-content: center;
+                    }                    
+                }               
+                .go-on{
+                    color: darken(color($colors,light),40%);
+                    border: 2px solid darken(color($colors,light),40%);
+                    margin-top:20px;
+                }
+            }
+            .end{
+                margin-top: 10px;
+            }
+            
+        }
+    }
+    
+}

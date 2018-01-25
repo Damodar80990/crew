@@ -7,12 +7,14 @@ import { homeComponent } from '../pages/home/home.component';
 import { listComponent } from '../pages/list/list.component';
 import { laborComponent } from '../pages/labor/labor.component';
 import { projectDetailsComponent } from '../pages/project-details/project-details.component';
+import { takeUntil } from 'rxjs/operator/takeUntil';
 //import { MaterialEquipmentComponent } from './../pages/material-equipment/material-equipment';
 
 export interface MenuItem {
   title: string;
   component: any;
   icon: string;
+  loadComponent: string;
 }
 
 @Component({
@@ -21,7 +23,7 @@ export interface MenuItem {
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = homeComponent;
+  rootPage: any = 'clockPage';//homeComponent;
   //rootPage: any = MaterialEquipmentComponent; //laborComponent;
   appMenuItems: Array<MenuItem>;
   accountMenuItems: Array<MenuItem>;
@@ -32,16 +34,16 @@ export class MyApp {
     this.initializeApp();
 
     this.appMenuItems = [
-      {title: 'Projects', component: listComponent, icon: 'paper'},
-      {title: 'Employees', component: listComponent, icon: 'people'},
-      {title: 'Time Cards', component: homeComponent, icon: 'grid'},
-      {title: 'Timeoff', component: homeComponent, icon: 'clock'},
-      {title: 'Notifications', component: listComponent, icon: 'notifications'},
-      {title: 'Reports', component: homeComponent, icon: 'analytics'},
-      {title: 'Settings', component: homeComponent, icon: 'cog'},
-      {title: 'About', component: homeComponent, icon: 'information-circle'},
-      {title: 'Help', component: homeComponent, icon: 'call'},
-      {title: 'Logout', component: homeComponent, icon: 'log-out'},
+      { title: 'Projects', component: listComponent, icon: 'paper', loadComponent: '' },
+      { title: 'Employees', component: listComponent, icon: 'people', loadComponent: '' },
+      { title: 'Time Cards', component: homeComponent, icon: 'grid', loadComponent: 'myTime' },
+      { title: 'Timeoff', component: homeComponent, icon: 'clock', loadComponent: 'clockPage' },
+      { title: 'Notifications', component: listComponent, icon: 'notifications', loadComponent: '' },
+      { title: 'Reports', component: homeComponent, icon: 'analytics', loadComponent: '' },
+      { title: 'Settings', component: homeComponent, icon: 'cog', loadComponent: '' },
+      { title: 'About', component: homeComponent, icon: 'information-circle', loadComponent: '' },
+      { title: 'Help', component: homeComponent, icon: 'call', loadComponent: '' },
+      { title: 'Logout', component: homeComponent, icon: 'log-out', loadComponent: '' },
     ];
 
     // this.accountMenuItems = [
@@ -68,6 +70,11 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    
+    if (page.loadComponent == '') {
+      this.nav.setRoot(page.component);
+    } else { 
+      this.nav.push(page.loadComponent);
+    }
   }
 }

@@ -1,0 +1,85 @@
+page-my-time {
+    padding:8px;
+    .tabbar{
+        opacity: 1;
+    }
+    .today{
+        .header{
+            margin-right:12px;
+            margin-left:12px;
+            span{
+                color:color($colors,primary);
+                font-size:17px;
+            }            
+        }
+        .time-cards
+        {
+            ion-card{    
+                .time-div{                
+                    background:color($colors,primary);
+                    padding: 8px 14px;
+                    font-size: 15px;
+                    margin-top: 5px;
+                    margin-right: 0px;                   
+                }            
+                .icons{
+                    border-top: 1px solid #e4e4e4;
+                    padding: 1px;                   
+                    ion-icon{
+                        font-size:25px;
+                        color: #a2a0a0;; 
+                        margin-right: 2px;                   
+                    }                    
+                }              
+            }
+        }
+    }
+    .week{
+        .header{
+            margin-right:16px;
+            margin-left:16px;
+            margin-top:4px;
+            span{
+                color:color($colors,primary);
+                font-size:17px;
+            }    
+            ion-icon{
+                font-size:25px;
+                margin-top: -2px; 
+            }        
+        }
+        .time-week
+        {
+            ion-card{    
+                ion-card-content{
+                    ion-grid{
+                        padding-right: 0px;
+                        padding-left: 0px;
+                        ion-row{
+                            ion-col{
+                                border:1px solid #e4e4e4;
+                                color:color($colors,primary);
+                            }
+                            ion-col:first-child{
+                                color:gray;
+                                text-align: center;
+                            }
+                            ion-col:last-child{
+                                color:gray;
+                            }
+                        }
+                    }
+                    .row-center{
+                        display: flex;
+                        justify-content: center;
+                        padding: 4px;
+                    }                    
+                }
+            }
+        }
+    }
+    .tabs-bottom{
+        position: fixed;
+        bottom: 0;
+    }
+}

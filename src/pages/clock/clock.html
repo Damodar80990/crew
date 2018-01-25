@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>My Time Clock</ion-title>
+    </ion-navbar>
+  </ion-header>
+<ion-content>    
+      <div class="ion-card">
+          <div class="ion-card-header" text-center>
+            <ion-row>
+              <ion-col *ngIf="isBreakLunch == false" full>
+                  <h1 class="time-main">
+                      {{hoursDisplay ? hoursDisplay : '00'}}:{{(minutesDisplay) && (minutesDisplay <= 59) ? minutesDisplay : '00'}}:{{(secondsDisplay) && (secondsDisplay <= 59) ? secondsDisplay : '00'}} <br/>
+                    </h1>
+                    <h2 class="time-sub"><ion-icon name="alarm"></ion-icon>
+                      {{mainHoursDisplay ? mainHoursDisplay : '00'}}:{{(mainMinutesDisplay) && (mainMinutesDisplay <= 59) ? mainMinutesDisplay : '00'}}:{{(mainSecondsDisplay) && (mainSecondsDisplay <= 59) ? mainSecondsDisplay : '00'}} <br/>
+                    </h2>
+              </ion-col>
+              <ion-col *ngIf="isBreakLunch == true" full>
+                  <h1 class="time-lunch-break">
+                      {{gapHoursDisplay ? gapHoursDisplay : '00'}}:{{(gapMinutesDisplay) && (gapMinutesDisplay <= 59) ? gapMinutesDisplay : '00'}}:{{(gapSecondsDisplay) && (gapSecondsDisplay <= 59) ? gapSecondsDisplay : '00'}} <br/>
+                    </h1>
+                  <h2 class="time-sub"><ion-icon name="alarm"></ion-icon>
+                    TIME ON {{messageOnTime}}</h2>
+              </ion-col>
+            </ion-row>  
+          </div>
+          <div class="ion-card-content" padding>
+           
+            <ion-row *ngIf="isClockIn == true">
+              <ion-col text-center>
+                  <button text-center ion-button color="primary"  round (click)="startStopClock(1)">CLOCK IN</button>
+              </ion-col>             
+            </ion-row>
+            <ion-row *ngIf="isClockIn == false">  
+              <ion-col text-center *ngIf="isBreakLunch == false" class="go-on-list">
+                  <button  ion-button color="danger"  round (click)="startStopClock(0)">CLOCK OUT</button>
+                  <button class="go-on"  ion-button   round clear (click)="startStopLunch(1)">GO ON LUNCH</button>
+                  <button class="go-on"  ion-button   round clear (click)="startStopBreak(1)">GO ON BREAK</button>
+              </ion-col>   
+              <ion-col text-center *ngIf="isBreakLunch == true" class="end"> 
+                  <button  ion-button color="primary"  round (click)="startStopLunch(0)" *ngIf="messageOnTime == 'LUNCH'">END LUNCH</button>
+                  <button  ion-button color="primary"  round (click)="startStopBreak(0)" *ngIf="messageOnTime == 'BREAK'">END BREAK</button>
+              </ion-col>
+            </ion-row>                   
+          </div>         
+        </div>
+</ion-content>
